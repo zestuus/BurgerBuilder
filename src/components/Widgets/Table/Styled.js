@@ -9,8 +9,5 @@ export const StyledTr = styled.tr`
 
 export const StyledTd = styled.td`
   ${props => props.columnWidth? "width: " + props.columnWidth: ""}
-  ${props => props.firstColumn? `
-    textDecoration: underline;
-    textTransform: capitalize;
-  `: ""}
+  ${props => props.firstColumn? "text-transform: capitalize;": ""}
 `;

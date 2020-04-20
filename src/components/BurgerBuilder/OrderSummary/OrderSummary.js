@@ -2,6 +2,7 @@ import React from 'react';
 
 import Table from "../../Widgets/Table/Table";
 import Button from "../../Widgets/Button/StyledButton";
+import {StyledWrapper} from "./Styled";
 
 const COLUMN_NAMES = ["Ingredient", "Amount", "Price", "Total"];
 
@@ -21,10 +22,12 @@ const OrderSummary = props => {
     <React.Fragment>
       <h3>Your Order</h3>
       <p>A delicious burger consist of:</p>
-      <Table
+      <StyledWrapper>
+        <Table
         rows={ingredientsList}
         columnNames={COLUMN_NAMES}
         columnWidth={"110px"}/>
+      </StyledWrapper>
       <h4>Total price: <em>{props.totalPrice}$</em></h4>
       <p>Continue to Checkout?</p>
       <Button onClick={props.cancel} type="danger">Cancel</Button>

@@ -13,6 +13,7 @@ export const StyledModal = styled.div`
   top: 25%;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
+  overflow: hidden;
   
   @media (min-width: 600px) {
     width: 500px;
