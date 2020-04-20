@@ -4,11 +4,13 @@ export const Button = styled.button`
   background-color: ${props => {
     switch (props.type) {
       case "danger": return "#ff8171";
+      case "warning": return "#f2bf34";
       case "success": return "#59ac60";
       default: return "#fff";
     }  
   }};
   height: 40px;
+  ${props=> props.width? "width: " + props.width : ""};
   margin: 5px;
   font-weight: bold;
   font-size: 1.1em;
